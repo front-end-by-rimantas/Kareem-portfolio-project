@@ -161,8 +161,78 @@ body * {
 
 
 /* SKILLS */
-
-
+body > #skills > .container > .left{
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin-top: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+    
+    body > #skills > .container > .left > p{
+        display: inline-block;
+        width: 100%;
+        float: left;
+        font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+    }
+    
+body > #skills > .container > .right{
+    display: inline-block;
+    width: 55%;
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    }
+    
+        body > #skills > .container > .right >  {
+            display: inline-block;
+            width: 100%;
+            margin: 10px 0;
+        }
+            
+                .progress-bar > .title {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+                    display: inline-block;
+                    float: left;
+                }
+              
+                 .progress-bar > .bar {
+                    display: inline-block;
+                    width: 100%;
+                    height: 20px;
+                    border: 1px solid #e0e0e0;
+                    background: transparent;
+                    border-radius: 50px;
+                    padding: 5px 8px;
+                    margin-bottom: 30px;
+            }
+                         .progress-bar > .bar > .value {
+                            display: inline-block;
+                            height: 10px;
+                            float: left;
+                            background-color: #90ACD1;
+                 }
+                         .progress-bar > .bar > .value > .vertical-line {
+                            width: 1px;
+                            height: 27px;
+                            float: right;
+                            margin-top: -6px;
+                            background: #90acd1;
+                    }
+                         .progress-bar > .bar > .value > .value1 {
+                            display: inline-block;
+                            font-weight: bold;
+                            float: right;
+                            padding-top: 12px;
+                            padding-right: 5px;
+                            font-size: 14px;
+                    }
 
 /* LATEST WORKS */
 
