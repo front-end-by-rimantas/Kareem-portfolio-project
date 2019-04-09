@@ -85,6 +85,9 @@ body * {
 .bg-blue {
     background-color: var(--color-secondary);
 }
+.bg-blue-vs-white {
+    background: linear-gradient(90deg, #fff 65%, var(--color-secondary) 35%);
+}
 .bg-light-grey {
     background-color: var(--color-secondary-light);
 }
@@ -93,12 +96,171 @@ body * {
 }
 
 /* HEADER */
+#container_menu {
+    display: inline-block;
+    padding: 25px 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+    #container_menu.scroll {
+        position: fixed;
+        background: #fff;
+        box-shadow: 0px 0px 4px #222;
+        z-index: 2;
+    }
+.menu_bar {
+    width: 1000px;
+    margin: 0 calc(50% - 500px);
+    display: inline-block;
+}
+    .head_logo {
+        float: left;
+        display: inline-block;
+    }
+    #menu_btn {
+        float: right;
+        display: inline-block;
+        cursor: pointer;
+    }
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+                transform: rotate(-45deg) translate(-9px, 8px);
+            }
+            .change .bar2 { transform: translateX(-180px);
+                background-color: transparent;
+            }
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
 
 
-
+/* SLIDING MENIU */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+    .ikonos_menu_kaire {
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 280px;
+        left: 300px;
+    }
+    .sidenav a {
+        text-decoration: none;
+        color: #959595;
+        font-size: 19px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+        display: block;
+        transition: 0.3s;
+        padding: 15px 0;
+    }
+    .sidenav a:hover {
+        color: var(--color-primary);
+    }
+.sidenavright {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:  rgba(255,255,255,0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}  
+    .ikonos_menu {
+        width: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 280px;
+        right: 50px;
+    }
+    .ikonos_menu a {
+        padding: 24px 8px 22px 32px;
+        text-decoration: none;
+        color: #959595;
+        font-size: 19px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+        display: block;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .ikonos_menu a:hover {
+        color: var(--color-primary);
+    }
 /* HERO */
 
-
+#hero > .container{
+    height: 100vh;
+}
+.head_left {
+    display: inline-block;
+    max-width: 40%;
+    float: left;
+    bottom: 350px;
+    text-align: left;
+    position: absolute;
+}
+    .head_left > h1 {
+        padding: 20px 0px 20px 5px;
+        font-size: 50px;
+    }
+        .head_left > p {
+            padding: 20px 0px 40px 5px;
+            max-width: 70%;
+            font-size: 30px;
+            color: #777;
+        }
+        .its_me {
+            background: #90acd1;
+            padding: 18px;
+            display: inline-block;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .hero_text_red {
+            color: var(--color-primary);
+        }
+        .hero_text_blue {
+            color: var(--color-secondary);
+        }
+.head_right {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 400px;
+}
+    .head_right > img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto
+    }
 
 /* CLIENT LOGOS */
 
@@ -108,7 +270,7 @@ body * {
 
 
 
-
+/* STATISTICS and SERVICE OFFERS */
 .cards-list {
     display: inline-block;
     width: 100%;

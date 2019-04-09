@@ -1,11 +1,34 @@
 "use strict";
 
 /* HEADER */
+window.onscroll = () => {
+    const nav = document.querySelector('#container_menu');
+    if(this.scrollY <= 200) nav.className = ''; else nav.className = 'scroll';
+  };
 
+  /* Opening meniu function*/
 
-
+  function atsidarymas () {
+      if (mySidenav.width !== '0' && mySidenavright.width !== '0') {
+        return document.getElementById("mySidenav").style.width = "50%", document.getElementById("mySidenavright").style.width = "50%"
+      }
+  }
+//   function openNav() {
+//     document.getElementById("mySidenav").style.width = "50%";
+//   }
+//   function closeNav() {
+//     document.getElementById("mySidenav").style.width = "0";
+//   }
+//   function openNavRight() {
+//     document.getElementById("mySidenavright").style.width = "50%";
+//   }
+//   function closeNavRight() {
+//     document.getElementById("mySidenavright").style.width = "0";
+//   }
 /* HERO */
-
+function myFunction(x) {
+  x.classList.toggle("change");
+}
 
 
 /* CLIENT LOGOS */
