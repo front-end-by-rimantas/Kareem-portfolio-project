@@ -19,22 +19,22 @@
 /* STATISTICS and SERVICE OFFERS */
 var statistics = [
     {
-        icon: 'fa-archive',
+        icon: 'archive',
         title: 'Total projects',
-        number: 245
+        number: '99999999'
     },
     {
-        icon: 'fa-trophy',
+        icon: 'trophy',
         number: 535,
         title: 'Trophy won'
     },
     {
-        icon: 'fa-user',
+        icon: 'user',
         number: 288,
         title: 'Experiencess staff'
     },
     {
-        icon: 'fa-smile-o',
+        icon: 'smile-o',
         number: 750,
         title: 'Happy clients'
     }
