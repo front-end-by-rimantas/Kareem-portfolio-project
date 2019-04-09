@@ -17,8 +17,28 @@
 
 
 /* STATISTICS and SERVICE OFFERS */
-
-
+var statistics = [
+    {
+        icon: 'archive',
+        title: 'Total projects',
+        number: '99999999'
+    },
+    {
+        icon: 'trophy',
+        number: 535,
+        title: 'Trophy won'
+    },
+    {
+        icon: 'user',
+        number: 288,
+        title: 'Experiencess staff'
+    },
+    {
+        icon: 'smile-o',
+        number: 750,
+        title: 'Happy clients'
+    }
+];
 
 /* SKILLS */
 
