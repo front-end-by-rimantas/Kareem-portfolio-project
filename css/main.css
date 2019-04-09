@@ -2,6 +2,7 @@
     --color-primary: #E45447;
     --color-secondary: #90ACD1;
     --color-secondary-light: #F9F9FF;
+    --color-black: #222;
 }
 
 body,
@@ -109,7 +110,53 @@ body * {
 
 
 /* STATISTICS and SERVICE OFFERS */
-
+.cards-list {
+    display: inline-block;
+    width: 100%;
+}
+    .cards-list > .card {
+        display: inline-block;
+        float: left;
+        margin-right: 30px;
+        width: calc( (100% - 3*30px) / 4 );
+        padding: 60px 15px;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        text-align: center;
+        background-color: var(--color-secondary-light);
+    }
+        .cards-list > .card > i {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            line-height: 80px;
+            font-size: 32px;
+            background-color: #DFE6F4;
+            color: #585A5C;
+            border: 2px solid var(--color-secondary);
+            border-radius: 50%;
+        }
+        .cards-list > .card > .number {
+            display: inline-block;
+            width: 100%;
+            line-height: 40px;
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--color-black);
+        }
+        .cards-list > .card > .title {
+            display: inline-block;
+            width: 100%;
+            line-height: 28px;
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--color-black);
+            text-transform: uppercase;
+        }
+        .cards-list > .card:last-child {
+            margin-right: 0;
+        }
 
 
 /* SKILLS */

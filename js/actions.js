@@ -17,7 +17,7 @@
 
 
 /* STATISTICS and SERVICE OFFERS */
-
+document.getElementById('statistics_cards').innerHTML = renderCards( statistics );
 
 
 /* SKILLS */
