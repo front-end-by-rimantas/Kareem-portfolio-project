@@ -17,6 +17,12 @@
 
 
 /* STATISTICS and SERVICE OFFERS */
+
+/**
+ * Rendering list of statistics or services cards
+ * @param {array} data - list of objects, contains {icon, number, title}
+ * @returns {string} HTML of cards
+ */
 function renderCards( data ) {
     var HTML = '',
         good_ones = 0;
@@ -51,9 +57,43 @@ function renderCards( data ) {
     return HTML;
 }
 
-
 /* SKILLS */
+/**
+ * Rendering list of progress bars
+ * @param {array} data - list of objects, contains {title, value}
+ * @returns {string} HTML of progress bars
+ */
+function renderSkills( data ) {
+    var HTML = '';
+    
+    if ( !Array.isArray(data) || data.length === 0 ) {
+        return HTML;
+    }
 
+    for ( var i=0; i<data.length; i++ ) {
+        if ( !data[i].title ||
+             typeof(data[i].title) !== 'string' ||
+             data[i].title.length < 1 ||
+             data[i].title.length > 30 ||
+             !data[i].value ||
+             typeof(data[i].value) !== 'number' ||
+             data[i].value < 0 ||
+             data[i].value > 100 ) {
+            continue;
+        }
+        HTML += '<div class="progress-bar">\
+                    <div class="title">'+data[i].title+'</div>\
+                    <div class="bar">\
+                        <div class="value" style="width: '+data[i].value+'%;">\
+                            <div class="vertical-line"></div>\
+                            <div class="value1">'+data[i].value+'%</div>\
+                        </div>\
+                    </div>\
+                </div>';
+    }
+
+    return HTML;
+}
 
 
 /* LATEST WORKS */

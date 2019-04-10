@@ -41,7 +41,46 @@ var statistics = [
 ];
 
 /* SKILLS */
-
+var skills = [
+    {
+        title: 'HTML5',
+        value: 85
+    },
+    {
+        value: 75
+    },
+    {
+        title: 'QWE'
+    },
+    {
+        title: '',
+        value: 75
+    },
+    {
+        title: 'ABC',
+        value: ''
+    },
+    {
+        title: 'ABC',
+        value: 120
+    },
+    {
+        title: 'ABC',
+        value: -5
+    },
+    {
+        title: 'CSS3',
+        value: 75
+    },
+    {
+        title: 'J-Query',
+        value: 90
+    },
+    {
+        title: 'Bootstrap',
+        value: 60
+    }
+];
 
 
 /* LATEST WORKS */
