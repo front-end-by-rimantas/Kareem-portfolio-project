@@ -203,7 +203,33 @@ body > * {
 
 
 /* ABOUT MYSELF */
+.left {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+    .left > img {
+        max-width: 90%;
+    }
+.right  {
+    display: inline-block;
+    float: left;
+    width: 50%;
 
+}
+    .right > .right_content { 
+        max-width: 90%;
+        float: right;
+        display: inline-block;
+        margin: 40px 0;
+    }
+        .right > .right_content > p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #777;
+            margin: 20px 0;
+        }
 
 
 
