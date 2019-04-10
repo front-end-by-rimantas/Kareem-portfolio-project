@@ -47,28 +47,6 @@ var skills = [
         value: 85
     },
     {
-        value: 75
-    },
-    {
-        title: 'QWE'
-    },
-    {
-        title: '',
-        value: 75
-    },
-    {
-        title: 'ABC',
-        value: ''
-    },
-    {
-        title: 'ABC',
-        value: 120
-    },
-    {
-        title: 'ABC',
-        value: -5
-    },
-    {
         title: 'CSS3',
         value: 75
     },

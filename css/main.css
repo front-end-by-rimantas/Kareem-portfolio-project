@@ -232,25 +232,44 @@ body > * {
         }
             .progress-bar > .bar > .value {
                 display: inline-block;
+                width: 100%;
                 height: 10px;
                 float: left;
-                background-color: #90ACD1;
+                background-color: #FFF;
             }
-                .progress-bar > .bar > .value > .vertical-line {
-                    width: 1px;
-                    height: 27px;
-                    float: right;
-                    margin-top: -6px;
-                    background: #90acd1;
-                }
-                .progress-bar > .bar > .value > .value1 {
+                .progress-bar > .bar > .value > .loading-part {
                     display: inline-block;
-                    font-weight: bold;
-                    float: right;
-                    padding-top: 12px;
-                    padding-right: 5px;
-                    font-size: 14px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #90ACD1;
+                    animation-name: progress_bar_loading;
+                    animation-duration: 2s;
+                    animation-iteration-count: 1;
                 }
+                    .progress-bar > .bar > .value > .loading-part > .vertical-line {
+                        width: 1px;
+                        height: 27px;
+                        float: right;
+                        margin-top: -6px;
+                        background: #90acd1;
+                    }
+                    .progress-bar > .bar > .value > .loading-part > .text-value {
+                        display: inline-block;
+                        font-weight: bold;
+                        float: right;
+                        padding-top: 12px;
+                        padding-right: 5px;
+                        font-size: 14px;
+                    }
+
+@keyframes progress_bar_loading {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
 /* LATEST WORKS */
 

@@ -85,8 +85,10 @@ function renderSkills( data ) {
                     <div class="title">'+data[i].title+'</div>\
                     <div class="bar">\
                         <div class="value" style="width: '+data[i].value+'%;">\
-                            <div class="vertical-line"></div>\
-                            <div class="value1">'+data[i].value+'%</div>\
+                            <div class="loading-part">\
+                                <div class="vertical-line"></div>\
+                                <div class="text-value">'+data[i].value+'%</div>\
+                            </div>\
                         </div>\
                     </div>\
                 </div>';
