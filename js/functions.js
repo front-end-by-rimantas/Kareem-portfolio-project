@@ -1,7 +1,13 @@
 "use strict";
 
 /* HEADER */
-
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
+window.onscroll = () => {
+    const nav = document.querySelector('#container_menu');
+    if(this.scrollY <= 200) nav.className = ''; else nav.className = 'scroll';
+};
 
 
 /* HERO */

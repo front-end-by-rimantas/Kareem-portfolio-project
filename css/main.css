@@ -101,24 +101,50 @@ body > * {
 }
 
 /* HEADER */
-#header {
-    padding: 10px 0;
+#container_menu {
+    display: inline-block;
+    padding: 25px 0;
+    width: 100%;
+    position: fixed;
 }
-    #header > a {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
+    #container_menu.scroll {
+        position: fixed;
+        background: #fff;
+        box-shadow: 0px 0px 4px #222;
+        z-index: 2;
+    }
+.menu_bar {
+    width: 1000px;
+    margin: 0 calc(50% - 500px);
+    display: inline-block;
+}
+    .head_logo {
         float: left;
-    }
-        #header > a > img {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-        }
-    #header > .menu {
         display: inline-block;
-        float: right;
     }
+    #menu_btn {
+        float: right;
+        display: inline-block;
+        cursor: pointer;
+    }
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+                transform: rotate(-45deg) translate(-9px, 8px);
+            }
+            .change .bar2 { transform: translateX(-180px);
+                background-color: transparent;
+            }
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
 
 
 /* HERO */
