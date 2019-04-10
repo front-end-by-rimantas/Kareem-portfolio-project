@@ -96,6 +96,9 @@ body > * {
 .bg-red {
     background-color: var(--color-primary);
 }
+.bg-blue-vs-white {
+    background: linear-gradient(90deg, #fff 65%, var(--color-secondary) 35%);
+}
 
 /* HEADER */
 #header {
@@ -119,7 +122,54 @@ body > * {
 
 
 /* HERO */
-
+#hero > .container{
+    height: 100vh;
+}
+.head_left {
+    display: inline-block;
+    max-width: 40%;
+    float: left;
+    bottom: 350px;
+    text-align: left;
+    position: absolute;
+}
+    .head_left > h1 {
+        padding: 20px 0px 20px 5px;
+        font-size: 50px;
+    }
+        .head_left > p {
+            padding: 20px 0px 40px 5px;
+            max-width: 70%;
+            font-size: 30px;
+            color: #777;
+        }
+        .its_me {
+            background: #90acd1;
+            padding: 18px;
+            display: inline-block;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .hero_text_red {
+            color: var(--color-primary);
+        }
+        .hero_text_blue {
+            color: var(--color-secondary);
+        }
+.head_right {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 400px;
+}
+    .head_right > img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto
+    }
 
 
 /* CLIENT LOGOS */
