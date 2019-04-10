@@ -277,7 +277,69 @@ body > * {
 
 /* JOB HISTORY */
 
+#job_history > .container > .basement{
+    display: inline-block;
+    float: left;
+    width: 50%;
+    padding:10px 10px;
+}
+    #job_history > .container > .basement > .bas-block > {
+        display: inline-block;
+        float: left;
+        width: 100%;
+    }
+        #job_history > .container > .basement > .bas-block > .rad-block {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            position: relative;
+            border: 1px solid #CCC;
+            border-radius: 20px;
+            height: 200px;
+            background-color: var(--color-secondary-light);
+        }
+        #job_history > .container > .basement > .bas-block > .rad-block:hover {
+            background-color: var(--color-secondary);
+            cursor: pointer;
+        }
 
+            #job_history > .container > .basement > .bas-block > .rad-block > .center-block{
+                display: inline-block;
+                width: 90%;
+                height: 60%;
+                position: absolute;
+                margin-left: 5%;
+                margin-top: 8%;
+            }
+                /* #job_history > .container > .basement > .bas-block > .rad-block > .center-block > .button-block{
+                    display: inline-block;
+                    width: 90%;
+                    height: 60%;
+                    position: absolute;
+                    margin-left: 5%;
+                    margin-top: 8%;
+                } */
+                    #job_history > .container > .basement > .bas-block > .rad-block > .center-block > .button-block > .title-block{
+                        display: inline-block;
+                        float: left; width: 100%;
+                        height: 50%;
+                    }
+                        #job_history > .container > .basement > .bas-block > .rad-block > .center-block > .button-block > .title-block > .title{
+                            display: inline-block;
+                            float: left;
+                            width: 55%;
+                        }
+                            #job_history > .container > .basement > .bas-block > .rad-block > .center-block > .button-block > .title-block > .btn-block{
+                                display: inline-block;
+                                float: right;
+                                width: 45%;
+                            }
+                            #job_history > .container > .basement > .bas-block > .rad-block > .center-block > .button-block > .title-block > .text-block{
+                                display: inline-block;
+                                float: left;
+                                width: 100%;
+                                height: 50%;
+                            }
 
 /* TESTIMONIALS */
 
