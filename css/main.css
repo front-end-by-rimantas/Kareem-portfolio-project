@@ -98,6 +98,16 @@ body > * {
 }
 
 /* HEADER */
+body {
+    position: relative;
+}
+body > header {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 #header {
     padding: 10px 0;
 }
@@ -119,7 +129,47 @@ body > * {
 
 
 /* HERO */
-
+#hero {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+}
+    #hero > .secondary-color-hero-background {
+        display: inline-block;
+        float: left;
+        background-color: var(--color-secondary);
+        /* width: calc(50% - 200px); */
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: calc(50% + 200px);
+        bottom: 0;
+        z-index: -1;
+    }
+        #hero > .secondary-color-hero-background > .circle {
+            display: inline-block;
+            background-color: var(--color-secondary);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 37%;
+            left: -150px;
+            bottom: 0;
+        }
+    #hero > .container {
+        padding: 110px 0 0 0;
+    }
+    #hero .hero-content {
+        display: inline-block;
+        float: left;
+        width: 40%;
+    }
+    #hero img {
+        display: inline-block;
+        float: right;
+        width: 40%;
+    }
 
 
 /* CLIENT LOGOS */
