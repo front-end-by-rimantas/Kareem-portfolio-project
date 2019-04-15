@@ -108,21 +108,21 @@ body > header {
     left: 0;
     right: 0;
 }
-.container {
+#header > .container {
     padding: 10px 0;
 }
-    .container > a {
+    #header a {
         display: inline-block;
         width: 50px;
         height: 50px;
         float: left;
     }
-        .container > a > img {
+        #header a > img {
             display: inline-block;
             width: 100%;
             height: 100%;
         }
-    .container > .menu {
+    #header .menu {
         display: inline-block;
         float: right;
     }
@@ -135,6 +135,7 @@ body > header {
     transition: 0.3s ease-in-out;
     z-index: 1;
 }
+
 /* HERO */
 #hero {
     display: inline-block;
@@ -180,7 +181,10 @@ body > header {
 
 
 /* CLIENT LOGOS */
-    .container >.images {
+#clients > .container {
+    padding: 0;
+}
+    #clients .images {
         display: inline-block;
         margin-left: calc(50% - 500px);
         width: 1000px;
@@ -193,7 +197,7 @@ body > header {
         position: relative;
         text-align: center;
     }
-        .container > .images >img {
+        #clients .images > img {
             padding: 10px 20px;
 
         }
