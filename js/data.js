@@ -68,7 +68,36 @@ var skills = [
 
 
 /* JOB HISTORY */
-
+var jobs  = [
+    {
+        title: 'Senior Creative Design',
+        address: 'Mansoura FCIS, Egypt',
+        p: 'AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        date_from : '2018-06-15',
+        date_to : ''
+    },
+    {
+        title: 'Front End Designer',
+        address: 'Santa Mansion, Laplandia',
+        p: 'AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        date_from : '2018-01-01',
+        date_to : '2018-12-31'
+    },
+    {
+        title: 'Back End Developer',
+        address: 'Mansoura FCIS, Egypt',
+        p: 'AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        date_from : '2018-06-15',
+        date_to : ''
+    },
+    {
+        title: 'UI/UX Designer',
+        address: 'Mansoura FCIS, Egypt',
+        p: 'AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        date_from : '2018-06-15',
+        date_to : ''
+    },
+];
 
 
 /* TESTIMONIALS */
