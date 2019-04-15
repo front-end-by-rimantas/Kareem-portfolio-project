@@ -41,8 +41,6 @@ function renderCards( data ) {
         if ( !data[i].icon ||
              typeof(data[i].icon) !== 'string' ||
              data[i].icon.length < 1 ||
-             !data[i].number ||
-             (''+data[i].number).length > 9 ||
              !data[i].title ||
              typeof(data[i].title) !== 'string' ||
              data[i].title.length < 1 ) {
@@ -52,12 +50,21 @@ function renderCards( data ) {
         if ( good_ones >= 4 ) {
             break;
         }
-        HTML += '<div class="card">\
-                    <i class="fa fa-'+data[i].icon+'"></i>\
-                    <div class="number">'+data[i].number+'</div>\
-                    <div class="title">'+data[i].title+'</div>\
-                </div>';
-        good_ones++;
+        if ( data[i].number ){
+            HTML += '<div class="card">\
+                        <i class="fa fa-'+data[i].icon+'"></i>\
+                        <div class="number">'+data[i].number+'</div>\
+                        <div class="title">'+data[i].title+'</div>\
+                    </div>';
+            good_ones++;
+        } else {
+            HTML += '<div class="card">\
+                        <i class="fa fa-'+data[i].icon+'"></i>\
+                        <div class="title">'+data[i].title+'</div>\
+                        <div class="p">'+data[i].p+'</div>\
+                    </div>';
+            good_ones++;
+        }
     }
     return HTML;
 }

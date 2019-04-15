@@ -28,7 +28,7 @@ document.getElementById('statistics_cards').innerHTML = renderCards( statistics 
 
 /* SKILLS */
 document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills );
-
+document.getElementById('offers').innerHTML = renderCards( offers );
 
 /* LATEST WORKS */
 

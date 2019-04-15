@@ -243,8 +243,10 @@ body > header {
             font-size: 32px;
             margin-bottom: 15px;
             color: var(--color-black);
+            /* font-weight: bold;  */
         }
-        .cards-list > .card > .title {
+        .cards-list > .card > .title,
+        #offers > .card > .title {
             display: inline-block;
             width: 100%;
             line-height: 28px;
@@ -253,10 +255,49 @@ body > header {
             color: var(--color-black);
             text-transform: uppercase;
         }
+        #offers > .card > .p {
+            font-size: 14px;
+            color: #777;
+        }
         .cards-list > .card:last-child {
             margin-right: 0;
         }
 
+        #offers > .card:hover {
+            animation-name: card_up;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            margin-top: -20px;
+        }
+
+        @keyframes card_up {
+            0% {
+                margin-top: 0px;
+            }
+            100%{
+                margin-top: -20px;
+            }
+        }
+
+        /* SERVICE OFFERS */
+
+#service_offers > .container > .block-title .service-text-block > p{
+    display: inline-block;
+    float: left;
+    width: 45%;
+    margin-top: 20px;
+    line-height: 28px;
+    font-size: 14px;
+    margin-bottom: 70px;
+    color: #777;
+ }
+        #statistics_cards > .card > .service-title {
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+        #statistics_cards > .card > .service-text {
+            padding-bottom: 30px;
+        }
 
 /* SKILLS */
 #skills > .container > .left {
