@@ -108,26 +108,33 @@ body > header {
     left: 0;
     right: 0;
 }
-#header {
+.container {
     padding: 10px 0;
 }
-    #header > a {
+    .container > a {
         display: inline-block;
         width: 50px;
         height: 50px;
         float: left;
     }
-        #header > a > img {
+        .container > a > img {
             display: inline-block;
             width: 100%;
             height: 100%;
         }
-    #header > .menu {
+    .container > .menu {
         display: inline-block;
         float: right;
     }
-
-
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 4px var(--color-black);
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+}
 /* HERO */
 #hero {
     display: inline-block;
@@ -173,8 +180,23 @@ body > header {
 
 
 /* CLIENT LOGOS */
+    .container >.images {
+        display: inline-block;
+        margin-left: calc(50% - 500px);
+        width: 1000px;
+        background: #FFF;
+        box-shadow: 0px 20px 50px rgba(153, 153, 153, 0.2);
+        border-radius: 100px;
+        border: 1px solid rgba(214, 214, 214, 0.11);
+        padding: 60px 14px;
+        margin-top: -80px;
+        position: relative;
+        text-align: center;
+    }
+        .container > .images >img {
+            padding: 10px 20px;
 
-
+        }
 
 /* ABOUT MYSELF */
 

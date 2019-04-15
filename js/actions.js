@@ -1,7 +1,7 @@
 "use strict";
 
 /* HEADER */
-
+window.onscroll = function() {stickToTop()};
 
 
 /* HERO */
