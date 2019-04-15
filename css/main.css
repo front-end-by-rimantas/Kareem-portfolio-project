@@ -180,7 +180,7 @@ body > header {
 
 
 /* CLIENT LOGOS */
-    #clients > .container{
+    .container >.images {
         display: inline-block;
         margin-left: calc(50% - 500px);
         width: 1000px;
@@ -189,9 +189,14 @@ body > header {
         border-radius: 100px;
         border: 1px solid rgba(214, 214, 214, 0.11);
         padding: 60px 14px;
-        margin-top: -50px;
+        margin-top: -80px;
         position: relative;
+        text-align: center;
     }
+        .container > .images >img {
+            padding: 10px 20px;
+
+        }
 
 /* ABOUT MYSELF */
 
