@@ -88,7 +88,38 @@ var skills = [
 
 
 /* LATEST WORKS */
-
+var works = [
+    {
+        img: 'w1.jpg',
+        title: 'Work 1',
+        categories: 'cat-1'
+    },
+    {
+        img: 'w2.jpg',
+        title: 'Work 2',
+        categories: 'cat-1'
+    },
+    {
+        img: 'w3.jpg',
+        title: 'Work 3',
+        categories: 'cat-2'
+    },
+    {
+        img: 'w4.jpg',
+        title: 'Work 4',
+        categories: 'cat-3'
+    },
+    {
+        img: 'w5.jpg',
+        title: 'Work 5',
+        categories: 'cat-2'
+    },
+    {
+        img: 'w6.jpg',
+        title: 'Work 6',
+        categories: 'cat-1'
+    }
+];
 
 
 /* JOB HISTORY */

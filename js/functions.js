@@ -112,7 +112,45 @@ function renderSkills( data ) {
 
 
 /* LATEST WORKS */
+function renderWorks( data ) {
+    var HTML = '',
+        filter_HTML = '',
+        items_HTML = '';
+    if ( !Array.isArray(data) || data.length === 0 ){
+        return HTML;
+    }
 
+    for ( var i=0; i<data.length; i++ ) {
+        if ( true ) {
+            filter_HTML += '<div class="">\
+                                Filter-'+i+'\
+                            </div>';
+        }
+    }
+
+    for ( var i=0; i<data.length; i++ ) {
+        items_HTML += '<div class="item" style="background-image: url(img/works/'+data[i].img+');">\
+                        <div class="background">\
+                            <div class="texts">\
+                                <h4>'+data[i].title+'</h4>\
+                                <span>'+data[i].categories+'</span>\
+                            </div>\
+                        </div>\
+                    </div>';
+    }
+
+    HTML += '<div class="gallery">\
+                <div class="filter">\
+                    <div class="">All</div>\
+                    '+filter_HTML+'\
+                </div>\
+                <div class="item-list">\
+                    '+items_HTML+'\
+                </div>\
+            </div>';
+
+    return HTML;
+}
 
 
 /* JOB HISTORY */

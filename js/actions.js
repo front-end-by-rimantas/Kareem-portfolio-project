@@ -31,11 +31,11 @@ document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills
 document.getElementById('offers').innerHTML = renderCards( offers );
 
 /* LATEST WORKS */
-
+document.getElementById('latest_works').innerHTML = renderWorks( works );
 
 
 /* JOB HISTORY */
-document.getElementById('history').innerHTML = renderHistory( jobs);
+document.getElementById('history').innerHTML = renderHistory( jobs );
 
 
 /* TESTIMONIALS */
