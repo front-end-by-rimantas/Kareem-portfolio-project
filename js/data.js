@@ -42,7 +42,6 @@ var statistics = [
     }
 ];
 
-/* SERVICE OFFERS */
 var offers = [
     {
         icon: 'diamond icon',

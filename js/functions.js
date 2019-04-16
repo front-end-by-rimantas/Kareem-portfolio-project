@@ -57,7 +57,8 @@ function renderCards( data ) {
                         <div class="title">'+data[i].title+'</div>\
                     </div>';
             good_ones++;
-        } else {
+        }
+        if ( data[i].p ){
             HTML += '<div class="card">\
                         <i class="fa fa-'+data[i].icon+'"></i>\
                         <div class="title">'+data[i].title+'</div>\

@@ -235,6 +235,8 @@ body > header {
             color: #585A5C;
             border: 2px solid var(--color-secondary);
             border-radius: 50%;
+            animation: water_wave 3s linear infinite;
+            box-shadow: -4px 0 0 #DFE6F4, inset -2px 0 0 #F3F5FD;
         }
         .cards-list > .card > .number {
             display: inline-block;
@@ -277,9 +279,27 @@ body > header {
                 margin-top: -20px;
             }
         }
-        /* SERVICE OFFERS */
+        @keyframes water_wave {
+            0% {
+                border-radius: 35px 33px 47px 60px;
+            }
+            25% {
+                border-radius: 50px 33px 33px 47px;
+            }
+            50% {
+                border-radius: 47px 60px 35px 33px;
+            }
+            75% {
+                border-radius: 33px 47px 60px 40px;
+            }
+            100% {
+                border-radius: 35px 33px 47px 60px;
+            }
+        }
 
-#service_offers > .container > .block-title .service-text-block > p{
+/* SERVICE OFFERS */
+
+#service_offers > .container > .block-title .service-text-block > p {
     display: inline-block;
     float: left;
     width: 45%;
@@ -425,10 +445,9 @@ body > header {
             .job-box > .content > .top-section > .top-left {
                 display: inline-block;   
                 float: left;
-
             }
                 .job-box > .content > .top-section > .top-left > p {
-                color: inherit;
+                    color: inherit;
                 }
             .job-box > .content > .top-section > btn-right {
                 display: inline-block; 
