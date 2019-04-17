@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <div id="header" class="container">
+    <header id="header">
+        <div class="container">
             <a href="#">
                 <img src="img/Logo.png" alt="">
             </a>
@@ -21,17 +21,31 @@
         </div>
     </header>
 
-    <div id="hero" class="bg-blue">
+    <div id="hero">
+        <div class="secondary-color-hero-background">
+            <div class="circle"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <p>I'ts me</p>
                 <h1>Kareem EzZat</h1>
                 <p>Senior Creative Designer and Content Developer</p>
-                <a href="" class="button">Hire Me</a>
+                <a href="#" class="button">Hire Me</a>
             </div>
+            <img src="img/banner-img.png" alt="">
         </div>
     </div>
-
+    <div id="clients">
+        <div class="container">
+            <div class="images">
+                <img src="img/b1.png" alt="">
+                <img src="img/b2.png" alt="">
+                <img src="img/b3.png" alt="">
+                <img src="img/b4.png" alt="">
+                <img src="img/b5.png" alt="">
+            </div>
+        </div> 
+    </div>
     <div id="about_me">
         <div class="container">
             <div class="block-title">
@@ -88,7 +102,7 @@
                 <h2>Latest Works</h2>
                 <div class="line"></div>
             </div>
-            WORKS
+            <div id="latest_works"></div>
         </div>
     </div>
 
@@ -97,102 +111,27 @@
             <div class="block-title">
                 <h2>Job History</h2>
                 <div class="line"></div>
+                <p>It is a long established fact a reader will be distracted by the readable content of a page when looking at its layout.</p>
             </div>
-
-            <div id="job_history">
-                <div class="container">
-                    <div class="block-title">
-                        <h2>Job History</h2>
-                        <div class="line"></div>
-                    </div>
-                    <div class="basement">
-                        <div class="bas-block">
-                            <div class="rad-block">
-                                <div class="center-block">
-                                    <div class="button-block">
-                                        <div class="title-block">
-                                            <div class="title">
-                                                <h4>Senior Creative Design</h4>
-                                            </div>
-                                            <div class="btn-block">
-                                                <a href="#" class="btn" style="display: inline-block; float: right;">Jul '15to Present</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-block">
-                                        <p>AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    </div>
+            <div id="history">
+                <!-- <div class="job-box">
+                        <div class="content">
+                            <div class="top-section">
+                                <div class="top-left">
+                                    <h4>Senior Creative Design</h4>
+                                    <p>Mansoura FCIS, Egypt</p>
+                                </div>
+                                <div class="btn-right">
+                                    <a href="#" class="btn" style= "float: right" >Jul '15to Present</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="basement">
-                        <div class="bas-block">
-                            <div class="rad-block">
-                                <div class="center-block">
-                                    <div class="button-block">
-                                        <div class="title-block">
-                                            <div class="title">
-                                                <h4>Front End Designer</h4>
-                                            </div>
-                                            <div class="btn-block">
-                                                <a href="#" class="btn" style="display: inline-block; float: right;">Jul '15to Present</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-block">
-                                        <p>AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
+                            <div class="bottom-section">
+                                <p>AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="basement">
-                        <div class="bas-block">
-                            <div class="rad-block">
-                                <div class="center-block">
-                                    <div class="button-block">
-                                        <div class="title-block">
-                                            <div class="title">
-                                                <h4>Back End Developer</h4>
-                                            </div>
-                                            <div class="btn-block">
-                                                <a href="#" class="btn" style="display: inline-block; float: right;">Jul '15to Present</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-block">
-                                        <p>AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="basement">
-                        <div class="bas-block">
-                            <div class="rad-block">
-                                <div class="center-block">
-                                    <div class="button-block">
-                                        <div class="title-block">
-                                            <div class="title">
-                                                <h4>UI/UX Designer</h4>
-                                            </div>
-                                            <div class="btn-block">
-                                                <a href="#" class="btn" style="display: inline-block; float: right;">Jul '15to Present</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="text-block">
-                                        <p>AIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>-->
             </div>
-            
-        </div>
+        </div>    
     </div>
 
     <div id="service_offers" class="bg-light-grey">
@@ -200,15 +139,20 @@
             <div class="block-title">
                 <h2>Service Offers</h2>
                 <div class="line"></div>
+                <div class="service-text-block">
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p> 
+                </div>
+                <div id="offers" class="cards-list"> </div>
             </div>
-            SERVICE OFFERS
         </div>
     </div>
+
 
     <div id="testimonials">
         <div class="container">
             Testimonials
         </div>
+    </div>
 
     <div id="contact_me" class="bg-red">
         <div class="container">
@@ -253,6 +197,7 @@
     </footer>
 
     <script src="js/data.js"></script>
+    <script src="js/jQuery.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>
 </body>
