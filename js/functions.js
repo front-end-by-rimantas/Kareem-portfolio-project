@@ -124,9 +124,8 @@ function renderWorks( data ) {
 
     for ( var i=0; i<data.length; i++ ) {
         if ( unique_filters.indexOf( data[i].categories ) === -1 ) {
-            filter_HTML += '<div class="">\
-                                '+data[i].categories+'\
-                            </div>';
+            // capitalize category title
+            filter_HTML += '<div>'+data[i].categories[0].toUpperCase() + data[i].categories.slice(1)+'</div>';
             unique_filters.push( data[i].categories );
         }
         // ar_unikalu = true;
