@@ -115,17 +115,33 @@ function renderSkills( data ) {
 function renderWorks( data ) {
     var HTML = '',
         filter_HTML = '',
-        items_HTML = '';
+        items_HTML = '',
+        unique_filters = [],
+        ar_unikalu = false;
     if ( !Array.isArray(data) || data.length === 0 ){
         return HTML;
     }
 
     for ( var i=0; i<data.length; i++ ) {
-        if ( true ) {
+        if ( unique_filters.indexOf( data[i].categories ) === -1 ) {
             filter_HTML += '<div class="">\
-                                Filter-'+i+'\
+                                '+data[i].categories+'\
                             </div>';
+            unique_filters.push( data[i].categories );
         }
+        // ar_unikalu = true;
+        // for ( var u=0; u<unique_filters.length; u++ ) {
+        //     if ( unique_filters[u] === data[i].categories ) {
+        //         ar_unikalu = false;
+        //         break;
+        //     }
+        // }
+        // if ( ar_unikalu === true ) {
+        //     filter_HTML += '<div class="">\
+        //                         '+data[i].categories+'\
+        //                     </div>';
+        //     unique_filters.push( data[i].categories );
+        // }
     }
 
     for ( var i=0; i<data.length; i++ ) {
