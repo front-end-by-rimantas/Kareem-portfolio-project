@@ -4,11 +4,6 @@
 window.onscroll = function() {stickToTop()};
 
 
-$('#header .menu').click(function(){
-    console.log('pirmas mano kartas :)');
-    console.log('su jumis... :D');
-    
-});
 
 /* HERO */
 
@@ -28,10 +23,22 @@ document.getElementById('statistics_cards').innerHTML = renderCards( statistics 
 
 /* SKILLS */
 document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills );
-document.getElementById('offers').innerHTML = renderCards( offers );
+// document.getElementById('offers').innerHTML = renderCards( offers );
+$('#offers').html( renderCards( offers ) );
 
 /* LATEST WORKS */
 document.getElementById('latest_works').innerHTML = renderWorks( works );
+
+$('.gallery > .filter > div').click(function(){
+    console.log( $(this).text() );
+});
+
+$('.item-list > .item').click(function(){
+    console.log( $(this).find('.background > .texts > h4').text() );
+    // $(this).addClass('labas-rytas');
+    // $(this).removeClass('labas-rytas');
+    // $(this).toggleClass('labas-rytas');
+});
 
 
 /* JOB HISTORY */
