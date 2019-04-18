@@ -542,7 +542,8 @@ body > header {
 
 /* JOB HISTORY */
 
-#job_history{
+#job_history {
+    display: inline-block;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
