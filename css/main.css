@@ -117,6 +117,7 @@ body > header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 #header > .container {
     padding: 10px 0;
@@ -144,6 +145,55 @@ body > header {
     box-shadow: 0 0 4px var(--color-black);
     transition: 0.3s ease-in-out;
     z-index: 1;
+}
+
+.sliding-menu {
+    display: none;
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+    .sliding-menu > .sliding-part {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        height: 100%;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+    }
+        .sliding-menu > .sliding-part.part-left {
+            padding-left: calc( (100% - 1000px) / 2 );
+            background: red;
+            animation-name: menu-from-left;
+        }
+        .sliding-menu > .sliding-part.part-right {
+            float: right;
+            padding-right: calc( (100% - 1000px) / 2 );
+            background: blue;
+            animation-name: menu-from-right;
+        }
+.sliding-menu-visible .sliding-menu {
+    display: inline-block;
+}
+    .sliding-menu-visible .sticky,
+    body.sliding-menu-visible > header {
+        background: #FFFC;
+    }
+
+@keyframes menu-from-left {
+    0% {
+        margin-left: -50%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+@keyframes menu-from-right {
+    0% {
+        margin-right: -50%;
+    }
+    100% {
+        margin-right: 0%;
+    }
 }
 
 /* HERO */
