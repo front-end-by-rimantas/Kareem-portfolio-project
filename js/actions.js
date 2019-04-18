@@ -3,7 +3,9 @@
 /* HEADER */
 window.onscroll = function() {stickToTop()};
 
-
+$('#header .menu').click(function(){
+    $('body').toggleClass('sliding-menu-visible');
+});
 
 /* HERO */
 
