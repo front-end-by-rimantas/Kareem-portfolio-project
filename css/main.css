@@ -107,6 +107,7 @@ body > header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 }
 #header > .container {
     padding: 10px 0;
@@ -133,9 +134,77 @@ body > header {
     background: #fff;
     box-shadow: 0 0 4px var(--color-black);
     transition: 0.3s ease-in-out;
-    z-index: 1;
+    z-index: 2;
 }
 
+/* SLIDING MENU STYLING*/
+.nav-sidebar, .nav-sidebar-right {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  padding: 0;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  transition: all 0.7s ease-in-out;
+}
+  .nav-sidebar {
+    left: 0;
+    bottom: 0;
+  }
+    .nav-sidebar ul li {
+      line-height: 50px;
+      list-style: none;
+    }
+   .nav-sidebar ul li a {
+      display: block;
+      color: #959595;
+      font-size: 16px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      padding: 5px 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: all 0.7s ease-in-out;
+    }
+      .nav-sidebar ul li a:hover {
+        color: #E45447;
+      }
+.nav-sidebar-right {
+  right: 0;
+  bottom: 0;
+}
+  .nav-sidebar-right ul li {
+    line-height: 50px;
+    list-style: none;
+    text-align: right; 
+  }
+  .nav-sidebar-right ul li a {
+    display: block;
+    color: #959595;
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    padding: 7px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+  }
+    .nav-sidebar-right ul li a:hover  {
+      color: #E45447;
+    }
+.side-bars-information {
+    position: absolute;
+    top: calc(50vh / 2);
+    left: calc(50% / 2);
+}
+.side-bars-information-right {
+    position: absolute;
+    top: 30vh;
+    right: calc(50% / 2);
+}
 /* HERO */
 #hero {
     display: inline-block;
