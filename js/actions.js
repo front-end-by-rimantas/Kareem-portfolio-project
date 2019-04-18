@@ -6,6 +6,9 @@ window.onscroll = function() {stickToTop()};
 $('#header .menu').click(function(){
     $('body').toggleClass('sliding-menu-visible');
 });
+$('header .menu').click(function(){
+    $(this).toggleClass('open');
+});
 
 /* HERO */
 
@@ -37,7 +40,7 @@ $('.gallery > .filter > div').click(function(){
 
 $('.item-list > .item').click(function(){
     console.log( $(this).find('.background > .texts > h4').text() );
-    // $(this).addClass('labas-rytas');
+    // $(this).addClass('labasRytas');
     // $(this).removeClass('labas-rytas');
     // $(this).toggleClass('labas-rytas');
 });
