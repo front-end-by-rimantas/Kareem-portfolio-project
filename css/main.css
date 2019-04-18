@@ -97,6 +97,16 @@ body > * {
     background-color: var(--color-primary);
 }
 
+.color-blue {
+    color: var(--color-secondary);
+}
+.color-light-grey {
+    color: var(--color-secondary-light);
+}
+.color-red {
+    color: var(--color-primary);
+}
+
 /* HEADER */
 body {
     position: relative;
