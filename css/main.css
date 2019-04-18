@@ -182,12 +182,69 @@ body > header {
         display: inline-block;
         float: left;
         width: 40%;
+        margin-top: 100px;
     }
+        #hero .hero-content > p {
+            background-color: var(--color-secondary);
+            width: 80px;
+            color: #FFF;
+            padding: 15px 10px;
+            border-radius: 8px;
+            animation: fromTop 1s linear 1s;
+            animation-fill-mode: both;
+        }
+        #hero .hero-content > h1 {
+            font-size: 45px;
+            margin: 20px 0;
+            animation: fromBottom 1s linear 1.5s;
+            animation-fill-mode: both;
+        }
+        #hero .hero-content > .description {
+            font-size: 25px;
+            margin: 20px 0;
+            line-height: 40px;
+            color: #585A5C;
+            animation: fromBottom 1s linear 2s;
+            animation-fill-mode: both;
+        }
+
     #hero img {
         display: inline-block;
         float: right;
         width: 40%;
     }
+    #hero .hero-content > p::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 0;
+        height: 0;
+        border-left: 26px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 24px solid #90acd1;
+    }
+
+@keyframes fromTop {
+    0% {
+        transform: translate3d(0, -100px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+@keyframes fromBottom {
+    0% {
+        transform: translate3d(0, 100px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
 
 
 /* CLIENT LOGOS */
