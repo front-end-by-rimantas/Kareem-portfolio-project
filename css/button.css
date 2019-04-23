@@ -32,6 +32,9 @@
             color: var(--color-primary);
             cursor: pointer;
         }
+        .btn-border-color-primary{
+            border: 1px solid var(--color-primary);
+        }
         .btn.btn-in-red-background:hover{
             border: 1px solid #fff;
             background-color: var(--color-primary);
