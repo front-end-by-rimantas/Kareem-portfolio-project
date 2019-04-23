@@ -563,17 +563,22 @@ body > header {
             display: inline-block;
             float: left;
             margin-right: 20px;
+            cursor: pointer;
         }
+            .gallery > .filter > div:hover {
+                color: var(--color-primary);
+            }
     .gallery > .item-list {
         display: inline-block;
-        width: 100%;
+        width: calc(100% + 30px);
+        margin-left: -15px; 
+        overflow: hidden;
     }
         .gallery > .item-list > .item {
             display: inline-block;
-            width: calc( (100% - 60px) / 3 );
+            width: calc( (100% - 90px) / 3 );
             height: 313px;
-            margin-right: 30px;
-            margin-bottom: 30px;
+            margin: 0 15px 30px;
             background-color: #90acd1;
             border-radius: 8px;
             background-image: url(../img/works/w1.jpg);
@@ -602,9 +607,6 @@ body > header {
             .gallery > .item-list > .item:hover > .background {
                 display: flex;
             }
-        .gallery > .item-list > .item:nth-child(3n) {
-            margin-right: 0;
-        }
 
 
 /* JOB HISTORY */

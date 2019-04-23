@@ -30,7 +30,16 @@ $('#offers').html( renderCards( offers ) );
 document.getElementById('latest_works').innerHTML = renderWorks( works );
 
 $('.gallery > .filter > div').click(function(){
-    console.log( $(this).text() );
+    var category_name = $(this).attr('data-filter');
+    console.log( category_name );
+
+    if ( category_name === 'all' ) {
+        $('.gallery > .item-list > .item').show();
+    } else {
+        $('.gallery > .item-list > .item').hide();
+        $('.gallery > .item-list > .item span[data-filter="'+category_name+'"]').parents('.item').show();
+
+    }
 });
 
 $('.item-list > .item').click(function(){

@@ -117,16 +117,18 @@ function renderWorks( data ) {
         filter_HTML = '',
         items_HTML = '',
         unique_filters = [],
-        ar_unikalu = false;
+        ar_unikalu = false,
+        filter = '';
     if ( !Array.isArray(data) || data.length === 0 ){
         return HTML;
     }
 
     for ( var i=0; i<data.length; i++ ) {
-        if ( unique_filters.indexOf( data[i].categories ) === -1 ) {
+        filter = data[i].categories.toLowerCase();
+        if ( unique_filters.indexOf( filter ) === -1 ) {
             // capitalize category title
-            filter_HTML += '<div>'+data[i].categories[0].toUpperCase() + data[i].categories.slice(1)+'</div>';
-            unique_filters.push( data[i].categories );
+            filter_HTML += '<div data-filter="'+filter+'">'+data[i].categories[0].toUpperCase() + data[i].categories.slice(1)+'</div>';
+            unique_filters.push( filter );
         }
         // ar_unikalu = true;
         // for ( var u=0; u<unique_filters.length; u++ ) {
@@ -148,7 +150,7 @@ function renderWorks( data ) {
                         <div class="background">\
                             <div class="texts">\
                                 <h4>'+data[i].title+'</h4>\
-                                <span>'+data[i].categories+'</span>\
+                                <span data-filter="'+(data[i].categories.toLowerCase())+'">'+data[i].categories+'</span>\
                             </div>\
                         </div>\
                     </div>';
@@ -156,7 +158,7 @@ function renderWorks( data ) {
 
     HTML += '<div class="gallery">\
                 <div class="filter">\
-                    <div class="">All</div>\
+                    <div data-filter="all">All</div>\
                     '+filter_HTML+'\
                 </div>\
                 <div class="item-list">\
