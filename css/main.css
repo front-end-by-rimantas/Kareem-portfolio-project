@@ -117,10 +117,11 @@ body > header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 3;
 }
 #header > .container {
     padding: 10px 0;
+    position: relative;
 }
     #header a {
         display: inline-block;
@@ -184,27 +185,32 @@ body > header {
 
 .sliding-menu {
     display: none;
-    height: calc(100vh - 70px);
+    height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
     .sliding-menu > .sliding-part {
         display: inline-block;
         float: left;
         width: 50%;
         height: 100%;
+        margin-top: -70px;
+        padding-top: 70px;
         animation-iteration-count: 1;
         animation-duration: 2s;
     }
         .sliding-menu > .sliding-part.part-left {
             padding-left: calc( (100% - 1000px) / 2 );
-            background: red;
+            padding-right: 40px;
+            padding-bottom: 40px;
             animation-name: menu-from-left;
             transition: margin-left 2s;
         }
         .sliding-menu > .sliding-part.part-right {
             float: right;
             padding-right: calc( (100% - 1000px) / 2 );
-            background: blue;
+            padding-left: 40px;
+            padding-bottom: 40px;
             animation-name: menu-from-right;
             transition: margin-right 2s;
         }
