@@ -123,7 +123,7 @@ body > header {
     padding: 10px 0;
     position: relative;
 }
-    #header a {
+    #header .logo {
         display: inline-block;
         width: 50px;
         height: 50px;
@@ -188,56 +188,62 @@ body > header {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    margin-top: -70px;
+    padding-top: 70px;
 }
     .sliding-menu > .sliding-part {
         display: inline-block;
         float: left;
         width: 50%;
-        height: 100%;
+        height: calc(100% + 70px);
         margin-top: -70px;
         padding-top: 70px;
-        animation-iteration-count: 1;
-        animation-duration: 2s;
+        background: #FFFC;
     }
         .sliding-menu > .sliding-part.part-left {
             padding-left: calc( (100% - 1000px) / 2 );
             padding-right: 40px;
             padding-bottom: 40px;
-            animation-name: menu-from-left;
-            transition: margin-left 2s;
+            margin-left: -50%;
+            text-align: left;
+            /* transition: margin-left 2s; */
         }
         .sliding-menu > .sliding-part.part-right {
             float: right;
             padding-right: calc( (100% - 1000px) / 2 );
             padding-left: 40px;
             padding-bottom: 40px;
-            animation-name: menu-from-right;
-            transition: margin-right 2s;
+            margin-right: -50%;
+            text-align: right;
+            /* transition: margin-right 2s; */
         }
+            .sliding-menu > .sliding-part > a {
+                display: inline-block;
+                width: 100%;
+                padding: 10px 0;
+                line-height: 20px;
+                font-size: 16px;
+                text-decoration: none;
+                color: #585A5C;
+                text-transform: uppercase;
+            }
+                .sliding-menu > .sliding-part > a:hover,
+                .sliding-menu > .sliding-part > a.active {
+                    color: var(--color-primary);
+                }
 .sliding-menu-visible .sliding-menu {
     display: inline-block;
 }
-    .sliding-menu-visible .sticky,
-    body.sliding-menu-visible > header {
-        background: #FFFC;
-    }
-
-@keyframes menu-from-left {
-    0% {
-        margin-left: -50%;
-    }
-    100% {
+    /* issiaiskinti kodel neveikia "transition" kai inicijuojame su nauja klase */
+    /* .sliding-menu-visible .sliding-menu > .sliding-part.part-left {
         margin-left: 0%;
     }
-}
-@keyframes menu-from-right {
-    0% {
-        margin-right: -50%;
-    }
-    100% {
+    .sliding-menu-visible .sliding-menu > .sliding-part.part-right {
         margin-right: 0%;
+    } */
+    .sliding-menu-visible .sticky {
+        background: transparent;
     }
-}
 
 /* HERO */
 #hero {

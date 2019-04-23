@@ -4,10 +4,35 @@
 window.onscroll = function() {stickToTop()};
 
 $('#header .menu').click(function(){
-    $('body').toggleClass('sliding-menu-visible');
-});
-$('header .menu').click(function(){
+    var visible_menu = false;
+    if ( $(this).hasClass('open') ) {
+        visible_menu = true;
+    }
     $(this).toggleClass('open');
+
+    if ( visible_menu ) {
+        $(".sliding-menu > .sliding-part.part-right").animate({
+            'margin-right': -500
+        }, 1000);
+    
+        $(".sliding-menu > .sliding-part.part-left").animate({
+            'margin-left': -500
+        }, 1000, function() {
+            // Animation complete.
+            $('body').toggleClass('sliding-menu-visible');
+        });
+
+    } else {
+        $('body').toggleClass('sliding-menu-visible');
+
+        $(".sliding-menu > .sliding-part.part-right").animate({
+            'margin-right': 0
+        }, 2000);
+    
+        $(".sliding-menu > .sliding-part.part-left").animate({
+            'margin-left': 0
+        }, 2000);
+    }
 });
 
 /* HERO */
