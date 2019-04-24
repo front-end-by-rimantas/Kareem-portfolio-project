@@ -35,6 +35,8 @@ $('#header .menu').click(function(){
     }
 });
 
+
+
 /* HERO */
 
 
@@ -88,3 +90,7 @@ document.getElementById('history').innerHTML = renderHistory( jobs );
 
 
 /* BACKT TO TOP */
+
+$( window ).scroll(function() {
+    console.log( $(window).scrollTop() );
+});
