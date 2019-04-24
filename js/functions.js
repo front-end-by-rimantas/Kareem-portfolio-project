@@ -7,7 +7,38 @@ function stickToTop() {
     } else {
       header.classList.remove("sticky");
     }
-  }
+}
+
+function detectVisibleSection( scrollHeight ) {
+    var elementu_auksciai = [];
+
+    $('#header_menu > .part-left > a').each(function(){
+        var einamoji_nuoroda = $(this).attr('href'),
+            busena = '';
+    
+        if ( einamoji_nuoroda[0] !== '#' ) {
+            busena = 'normalus URL';
+        } else {
+            if ( einamoji_nuoroda.length <= 1 ) {
+                busena = 'per trumpas';
+                elementu_auksciai.push(0);
+            } else {
+                busena = 'normaliai';
+                elementu_auksciai.push( $(einamoji_nuoroda).position().top );
+                // elementu_auksciai.push( $(einamoji_nuoroda)[0].offsetTop );
+            }
+        }
+    });
+    
+    elementu_auksciai.forEach(element => {
+        if ( element > $(window).scrollTop() ) {
+            // pries tai buves yra tas kurio reikia
+            break;
+        }
+    });
+
+    return;
+}
 
 /* HERO */
 
