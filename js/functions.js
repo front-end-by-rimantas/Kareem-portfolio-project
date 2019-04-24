@@ -10,32 +10,33 @@ function stickToTop() {
 }
 
 function detectVisibleSection( scrollHeight ) {
-    var elementu_auksciai = [];
+    var elementu_auksciai = [],
+        tinkami_hrefs = [],
+        einamoji_nuoroda = '',
+        kelintas_matomas = 0;
 
     $('#header_menu > .part-left > a').each(function(){
-        var einamoji_nuoroda = $(this).attr('href'),
-            busena = '';
+        einamoji_nuoroda = $(this).attr('href');
     
-        if ( einamoji_nuoroda[0] !== '#' ) {
-            busena = 'normalus URL';
-        } else {
+        if ( einamoji_nuoroda[0] === '#' ) {
             if ( einamoji_nuoroda.length <= 1 ) {
-                busena = 'per trumpas';
                 elementu_auksciai.push(0);
+                tinkami_hrefs.push('#');
             } else {
-                busena = 'normaliai';
                 elementu_auksciai.push( $(einamoji_nuoroda).position().top );
-                // elementu_auksciai.push( $(einamoji_nuoroda)[0].offsetTop );
+                tinkami_hrefs.push(einamoji_nuoroda);
             }
         }
     });
-    
-    elementu_auksciai.forEach(element => {
-        if ( element > $(window).scrollTop() ) {
+
+    for ( var i=0; i<elementu_auksciai.length; i++ ) {
+        if ( elementu_auksciai[i] > scrollHeight ) {
+            console.log(tinkami_hrefs[kelintas_matomas]);
             // pries tai buves yra tas kurio reikia
             break;
         }
-    });
+        kelintas_matomas++;
+    }
 
     return;
 }
