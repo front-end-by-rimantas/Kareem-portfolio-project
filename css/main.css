@@ -25,6 +25,19 @@ body > * {
     margin-left: calc(50% - 500px);
     width: 1000px;
 }
+
+.upArrow {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: white;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  border-radius: 50px;
+}
+
 @media ( max-width: 1100px ) {
     .container {
         width: 780px;
@@ -136,7 +149,7 @@ body > header {
         }
     #header .menu {
         display: inline-block;
-        float: right;  
+        float: right;
         height: 30px;
         width: 30px;
         position: relative;
@@ -396,7 +409,7 @@ body > header {
     display: inline-block;
     float: left;
     width: 50%;
- 
+
  }
     .right > .right_content {
         max-width: 90%;
@@ -568,7 +581,7 @@ body > header {
     padding-right: 15px;
     padding-left: 15px;
     }
-    
+
     #skills > .container > .left > p {
         display: inline-block;
         width: 100%;
@@ -577,7 +590,7 @@ body > header {
         color: #777;
         margin-top: 20px;
     }
-    
+
 #skills > .container > .right {
     display: inline-block;
     width: 55%;
@@ -596,7 +609,7 @@ body > header {
             line-height: 20px;
             display: inline-block;
             float: left;
-        } 
+        }
         .progress-bar > .bar {
             display: inline-block;
             width: 100%;
@@ -670,7 +683,7 @@ body > header {
     .gallery > .item-list {
         display: inline-block;
         width: calc(100% + 30px);
-        margin-left: -15px; 
+        margin-left: -15px;
         overflow: hidden;
     }
         .gallery > .item-list > .item {
@@ -723,9 +736,9 @@ body > header {
             display: block;
             color: #777;
             max-width: 535px;
-            margin-top: 20px;    
+            margin-top: 20px;
         }
-    
+
     .job-box {
         display: inline-block;
         background-color: var(--color-secondary-light);
@@ -736,20 +749,20 @@ body > header {
     }
         .job-box > .content {
             display: inline-block;
-            width: 405px; 
+            width: 405px;
             padding-left: 15px;
             padding-right: 15px;
         }
             .job-box > .content > .top-section > .top-left {
-                display: inline-block;   
+                display: inline-block;
                 float: left;
             }
                 .job-box > .content > .top-section > .top-left > p {
                     color: inherit;
                 }
             .job-box > .content > .top-section > btn-right {
-                display: inline-block; 
-                float: right; 
+                display: inline-block;
+                float: right;
             }
             .job-box > .content > .bottom-section {
                 display: inline-block;
@@ -813,11 +826,11 @@ body > header {
     display: inline-block;
     text-align: center;
     width: 100%;
-}  
+}
     .footer-top > h3 {
         margin: 40px 0;
         color: grey;
-    }  
+    }
     .footer-top > .social > a {
         text-decoration: none;
     }
