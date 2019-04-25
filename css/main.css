@@ -139,8 +139,12 @@ body > header {
         float: right;  
         height: 30px;
         width: 30px;
+        margin-top: 10px;
         position: relative;
     }
+        #header .menu:hover {
+            cursor: pointer;
+        }
         #header .menu > span {
             display: block;
             position: absolute;
@@ -148,7 +152,7 @@ body > header {
             width: 100%;
             background-color: #000;
             border-radius: 5px;
-            margin: 10px 0;
+            margin: 1px 0;
             transition: ease-in-out .25s;
         }
         #header .menu > span:nth-child(1) {
