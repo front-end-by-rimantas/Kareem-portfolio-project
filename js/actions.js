@@ -35,6 +35,7 @@ $('#header .menu').click(function(){
     }
 });
 
+detectVisibleSection( $(window).scrollTop() )
 $( window ).scroll(function() {
     detectVisibleSection( $(window).scrollTop() );
 });

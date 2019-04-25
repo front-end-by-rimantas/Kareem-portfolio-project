@@ -31,12 +31,14 @@ function detectVisibleSection( scrollHeight ) {
 
     for ( var i=0; i<elementu_auksciai.length; i++ ) {
         if ( elementu_auksciai[i] > scrollHeight ) {
-            console.log(tinkami_hrefs[kelintas_matomas-1]);
             // pries tai buves yra tas kurio reikia
             break;
         }
         kelintas_matomas++;
     }
+    
+    $('.sliding-menu > .sliding-part.part-left > a').removeClass('active');
+    $('.sliding-menu > .sliding-part.part-left > a[href="'+tinkami_hrefs[i-1]+'"]').addClass('active');
 
     return;
 }
