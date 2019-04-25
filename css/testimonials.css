@@ -1,0 +1,26 @@
+.testimonials {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+    .testimonials > .testimonials-list {
+        display: inline-block;
+        width: 100%;
+    }
+        .testimonials > .testimonials-list > .item {
+            display: inline-block;
+            width: 100%;
+            float: left;
+            font-size: 200px;
+            text-align: center;
+        }
+    .testimonials > .testimonials-controls {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+        .testimonials > .testimonials-controls > i {
+            display: inline-block;
+            width: 100px;
+            font-size: 40px;
+        }

@@ -82,7 +82,7 @@ document.getElementById('history').innerHTML = renderHistory( jobs );
 
 
 /* TESTIMONIALS */
-
+$('#testimonials > .container').html( renderTestimonials(testimonials) );
 
 
 /* CONTACT ME */

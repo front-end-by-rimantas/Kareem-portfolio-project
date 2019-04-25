@@ -31,7 +31,7 @@ function detectVisibleSection( scrollHeight ) {
 
     for ( var i=0; i<elementu_auksciai.length; i++ ) {
         if ( elementu_auksciai[i] > scrollHeight ) {
-            console.log(tinkami_hrefs[kelintas_matomas]);
+            console.log(tinkami_hrefs[kelintas_matomas-1]);
             // pries tai buves yra tas kurio reikia
             break;
         }
@@ -274,7 +274,6 @@ function dateConverter( date ) {
 
 
 /* TESTIMONIALS */
-
 
 
 /* CONTACT ME */
