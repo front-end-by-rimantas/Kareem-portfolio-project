@@ -117,11 +117,13 @@ body > header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 3;
 }
 #header > .container {
     padding: 10px 0;
+    position: relative;
 }
-    #header a {
+    #header .logo {
         display: inline-block;
         width: 50px;
         height: 50px;
@@ -134,8 +136,43 @@ body > header {
         }
     #header .menu {
         display: inline-block;
-        float: right;
+        float: right;  
+        height: 30px;
+        width: 30px;
+        position: relative;
     }
+        #header .menu > span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: #000;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: ease-in-out .25s;
+        }
+        #header .menu > span:nth-child(1) {
+           top: 0px;
+        }
+        #header .menu > span:nth-child(2) {
+            top: 12.5px;
+        }
+         #header .menu > span:nth-child(3) {
+            top: 25px;
+        }
+    #header .open > span:nth-child(1) {
+        transform: rotate(135deg);
+        top: 12px;
+    }
+    #header .open > span:nth-child(2) {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    #header .open > span:nth-child(3) {
+        transform: rotate(-135deg);
+        top: 12px;
+    }
+
 .sticky {
     position: fixed;
     top: 0;
@@ -145,6 +182,68 @@ body > header {
     transition: 0.3s ease-in-out;
     z-index: 1;
 }
+
+.sliding-menu {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -70px;
+    padding-top: 70px;
+}
+    .sliding-menu > .sliding-part {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        height: calc(100% + 70px);
+        margin-top: -70px;
+        padding-top: 70px;
+        background: #FFFC;
+    }
+        .sliding-menu > .sliding-part.part-left {
+            padding-left: calc( (100% - 1000px) / 2 );
+            padding-right: 40px;
+            padding-bottom: 40px;
+            margin-left: -50%;
+            text-align: left;
+            /* transition: margin-left 2s; */
+        }
+        .sliding-menu > .sliding-part.part-right {
+            float: right;
+            padding-right: calc( (100% - 1000px) / 2 );
+            padding-left: 40px;
+            padding-bottom: 40px;
+            margin-right: -50%;
+            text-align: right;
+            /* transition: margin-right 2s; */
+        }
+            .sliding-menu > .sliding-part > a {
+                display: inline-block;
+                width: 100%;
+                padding: 10px 0;
+                line-height: 20px;
+                font-size: 16px;
+                text-decoration: none;
+                color: #585A5C;
+                text-transform: uppercase;
+            }
+                .sliding-menu > .sliding-part > a:hover,
+                .sliding-menu > .sliding-part > a.active {
+                    color: var(--color-primary);
+                }
+.sliding-menu-visible .sliding-menu {
+    display: inline-block;
+}
+    /* issiaiskinti kodel neveikia "transition" kai inicijuojame su nauja klase */
+    /* .sliding-menu-visible .sliding-menu > .sliding-part.part-left {
+        margin-left: 0%;
+    }
+    .sliding-menu-visible .sliding-menu > .sliding-part.part-right {
+        margin-right: 0%;
+    } */
+    .sliding-menu-visible .sticky {
+        background: transparent;
+    }
 
 /* HERO */
 #hero {

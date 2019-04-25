@@ -7,7 +7,39 @@ function stickToTop() {
     } else {
       header.classList.remove("sticky");
     }
-  }
+}
+
+function detectVisibleSection( scrollHeight ) {
+    var elementu_auksciai = [],
+        tinkami_hrefs = [],
+        einamoji_nuoroda = '',
+        kelintas_matomas = 0;
+
+    $('#header_menu > .part-left > a').each(function(){
+        einamoji_nuoroda = $(this).attr('href');
+    
+        if ( einamoji_nuoroda[0] === '#' ) {
+            if ( einamoji_nuoroda.length <= 1 ) {
+                elementu_auksciai.push(0);
+                tinkami_hrefs.push('#');
+            } else {
+                elementu_auksciai.push( $(einamoji_nuoroda).position().top );
+                tinkami_hrefs.push(einamoji_nuoroda);
+            }
+        }
+    });
+
+    for ( var i=0; i<elementu_auksciai.length; i++ ) {
+        if ( elementu_auksciai[i] > scrollHeight ) {
+            console.log(tinkami_hrefs[kelintas_matomas-1]);
+            // pries tai buves yra tas kurio reikia
+            break;
+        }
+        kelintas_matomas++;
+    }
+
+    return;
+}
 
 /* HERO */
 
@@ -244,7 +276,6 @@ function dateConverter( date ) {
 
 
 /* TESTIMONIALS */
-
 
 
 /* CONTACT ME */
