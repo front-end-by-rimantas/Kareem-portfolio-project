@@ -19,6 +19,7 @@
         background-color: var(--color-primary);
         color: #fff;
         cursor: pointer;
+        border: 1px solid var(--color-primary);
     }
         .btn.btn-blue:hover {
             background-color: var(--color-secondary);
@@ -30,6 +31,9 @@
             border: 1px solid var(--color-primary);
             color: var(--color-primary);
             cursor: pointer;
+        }
+        .btn-border-color-primary{
+            border: 1px solid var(--color-primary);
         }
         .btn.btn-in-red-background:hover{
             border: 1px solid #fff;

@@ -102,7 +102,7 @@ var works = [
     {
         img: 'w3.jpg',
         title: 'Work 3',
-        categories: 'cat-2'
+        categories: 'Cat-2'
     },
     {
         img: 'w4.jpg',
@@ -156,7 +156,7 @@ var jobs  = [
 
 
 /* TESTIMONIALS */
-
+var testimonials = [1,2,3,4];
 
 
 /* CONTACT ME */

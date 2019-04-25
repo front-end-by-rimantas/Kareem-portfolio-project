@@ -7,7 +7,41 @@ function stickToTop() {
     } else {
       header.classList.remove("sticky");
     }
-  }
+}
+
+function detectVisibleSection( scrollHeight ) {
+    var elementu_auksciai = [],
+        tinkami_hrefs = [],
+        einamoji_nuoroda = '',
+        kelintas_matomas = 0;
+
+    $('#header_menu > .part-left > a').each(function(){
+        einamoji_nuoroda = $(this).attr('href');
+    
+        if ( einamoji_nuoroda[0] === '#' ) {
+            if ( einamoji_nuoroda.length <= 1 ) {
+                elementu_auksciai.push(0);
+                tinkami_hrefs.push('#');
+            } else {
+                elementu_auksciai.push( $(einamoji_nuoroda).position().top );
+                tinkami_hrefs.push(einamoji_nuoroda);
+            }
+        }
+    });
+
+    for ( var i=0; i<elementu_auksciai.length; i++ ) {
+        if ( elementu_auksciai[i] > scrollHeight ) {
+            // pries tai buves yra tas kurio reikia
+            break;
+        }
+        kelintas_matomas++;
+    }
+    
+    $('.sliding-menu > .sliding-part.part-left > a').removeClass('active');
+    $('.sliding-menu > .sliding-part.part-left > a[href="'+tinkami_hrefs[i-1]+'"]').addClass('active');
+
+    return;
+}
 
 /* HERO */
 
@@ -115,17 +149,34 @@ function renderSkills( data ) {
 function renderWorks( data ) {
     var HTML = '',
         filter_HTML = '',
-        items_HTML = '';
+        items_HTML = '',
+        unique_filters = [],
+        ar_unikalu = false,
+        filter = '';
     if ( !Array.isArray(data) || data.length === 0 ){
         return HTML;
     }
 
     for ( var i=0; i<data.length; i++ ) {
-        if ( true ) {
-            filter_HTML += '<div class="">\
-                                Filter-'+i+'\
-                            </div>';
+        filter = data[i].categories.toLowerCase();
+        if ( unique_filters.indexOf( filter ) === -1 ) {
+            // capitalize category title
+            filter_HTML += '<div data-filter="'+filter+'">'+data[i].categories[0].toUpperCase() + data[i].categories.slice(1)+'</div>';
+            unique_filters.push( filter );
         }
+        // ar_unikalu = true;
+        // for ( var u=0; u<unique_filters.length; u++ ) {
+        //     if ( unique_filters[u] === data[i].categories ) {
+        //         ar_unikalu = false;
+        //         break;
+        //     }
+        // }
+        // if ( ar_unikalu === true ) {
+        //     filter_HTML += '<div class="">\
+        //                         '+data[i].categories+'\
+        //                     </div>';
+        //     unique_filters.push( data[i].categories );
+        // }
     }
 
     for ( var i=0; i<data.length; i++ ) {
@@ -133,7 +184,7 @@ function renderWorks( data ) {
                         <div class="background">\
                             <div class="texts">\
                                 <h4>'+data[i].title+'</h4>\
-                                <span>'+data[i].categories+'</span>\
+                                <span data-filter="'+(data[i].categories.toLowerCase())+'">'+data[i].categories+'</span>\
                             </div>\
                         </div>\
                     </div>';
@@ -141,7 +192,7 @@ function renderWorks( data ) {
 
     HTML += '<div class="gallery">\
                 <div class="filter">\
-                    <div class="">All</div>\
+                    <div data-filter="all">All</div>\
                     '+filter_HTML+'\
                 </div>\
                 <div class="item-list">\
@@ -227,7 +278,6 @@ function dateConverter( date ) {
 
 
 /* TESTIMONIALS */
-
 
 
 /* CONTACT ME */
