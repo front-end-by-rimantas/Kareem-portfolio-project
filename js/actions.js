@@ -60,7 +60,8 @@ document.getElementById('statistics_cards').innerHTML = statisticsModule( statis
 
 
 /* SKILLS */
-document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills );
+// document.getElementById('skills_progress_bars').innerHTML = renderSkills( skills );
+$('#skills_progress_bars').html( skillsModule( skills ) );
 // document.getElementById('offers').innerHTML = renderCards( offers );
 $('#offers').html( renderCards( offers ) );
 

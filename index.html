@@ -121,6 +121,19 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo voluptatibus placeat impedit temporibus quam officiis ipsum quod rem culpa aspernatur minima, assumenda aliquid, modi dignissimos explicabo sed rerum? Libero!</p>
             </div>
             <div id="skills_progress_bars" class="right">
+                <script id="skills_template" type="text/template">
+                    <div class="progress-bar">
+                        <div class="title">{{title}}</div>
+                        <div class="bar">
+                            <div class="value" style="width: {{value}}%;">
+                                <div class="loading-part">
+                                    <div class="vertical-line"></div>
+                                    <div class="text-value">{{value2}}%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </script>
                 <!-- <div class="progress-bar">
                     <div class="title">HTML5</div>
                     <div class="bar">

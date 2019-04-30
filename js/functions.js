@@ -1,5 +1,23 @@
 "use strict";
 
+function dataFormater( data ) {
+    var formated_data = {},
+        keys = Object.keys( data[0] );
+
+    // pertvarkome duomenis tinkamu formatu, pvz: { a:[], b: [], ... }
+    for ( var i=0; i<data.length; i++ ) {
+        keys = Object.keys( data[i] );
+        keys.forEach( key => {
+            if ( !Array.isArray( formated_data[key] ) ) {
+                formated_data[key] = [];
+            }
+            formated_data[key].push( data[i][key] );
+        });
+    }
+
+    return formated_data;
+}
+
 /* HEADER */
 function stickToTop() {
     if (window.pageYOffset > sticky) {
@@ -106,21 +124,7 @@ function renderCards( data ) {
 
 
 function statisticsModule( data ){
-    var formated_data = {},
-        keys = Object.keys( data[0] );
-
-    // pertvarkome duomenis tinkamu formatu, pvz: { a:[], b: [], ... }
-    for ( var i=0; i<data.length; i++ ) {
-        keys = Object.keys( data[i] );
-        keys.forEach( key => {
-            if ( !Array.isArray( formated_data[key] ) ) {
-                formated_data[key] = [];
-            }
-            formated_data[key].push( data[i][key] );
-        });
-    }
-
-    return HTML_template.render( $('#statistics_template').html(), formated_data );
+    return HTML_template.render( $('#statistics_template').html(), dataFormater( data ) );
 }
 
 
@@ -163,6 +167,10 @@ function renderSkills( data ) {
     }
 
     return HTML;
+}
+
+function skillsModule( data ) {
+    return HTML_template.render( $('#skills_template').html(), dataFormater( data ) );
 }
 
 

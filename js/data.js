@@ -70,19 +70,23 @@ var offers = [
 var skills = [
     {
         title: 'HTML5',
-        value: 85
+        value: 85,
+        value2: 85
     },
     {
         title: 'CSS3',
-        value: 75
+        value: 75,
+        value2: 75
     },
     {
         title: 'J-Query',
-        value: 90
+        value: 90,
+        value2: 90
     },
     {
         title: 'Bootstrap',
-        value: 60
+        value: 60,
+        value2: 60
     }
 ];
 
