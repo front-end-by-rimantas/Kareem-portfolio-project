@@ -95,6 +95,13 @@
     <div id="statistics" class="bg-light-grey">
         <div class="container">
             <div id="statistics_cards" class="cards-list">
+                <script id="statistics_template" type="text/template">
+                    <div class="card">
+                        <i class="fa fa-{{icon}}"></i>
+                        <div class="number">{{number}}</div>
+                        <div class="title">{{title}}</div>
+                    </div>
+                </script>
                 <!-- <div class="card">
                     <i class="fa fa-archive"></i>
                     <div class="number">88888888</div>
@@ -231,6 +238,7 @@
 
     <script src="js/data.js"></script>
     <script src="js/jQuery.js"></script>
+    <script src="js/HTML-template.js"></script>
     <script src="js/testimonials.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/actions.js"></script>

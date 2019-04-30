@@ -104,6 +104,27 @@ function renderCards( data ) {
     return HTML;
 }
 
+
+function statisticsModule( data ){
+    var formated_data = {},
+        keys = Object.keys( data[0] );
+
+    // pertvarkome duomenis tinkamu formatu, pvz: { a:[], b: [], ... }
+    for ( var i=0; i<data.length; i++ ) {
+        keys = Object.keys( data[i] );
+        keys.forEach( key => {
+            if ( !Array.isArray( formated_data[key] ) ) {
+                formated_data[key] = [];
+            }
+            formated_data[key].push( data[i][key] );
+        });
+    }
+
+    return HTML_template.render( $('#statistics_template').html(), formated_data );
+}
+
+
+
 /* SKILLS */
 /**
  * Rendering list of progress bars

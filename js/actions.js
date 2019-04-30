@@ -55,7 +55,8 @@ $( window ).scroll(function() {
 
 
 /* STATISTICS and SERVICE OFFERS */
-document.getElementById('statistics_cards').innerHTML = renderCards( statistics );
+// document.getElementById('statistics_cards').innerHTML = renderCards( statistics );
+document.getElementById('statistics_cards').innerHTML = statisticsModule( statistics );
 
 
 /* SKILLS */
