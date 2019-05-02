@@ -35,7 +35,7 @@ function detectVisibleSection( scrollHeight ) {
 
     $('#header_menu > .part-left > a').each(function(){
         einamoji_nuoroda = $(this).attr('href');
-    
+
         if ( einamoji_nuoroda[0] === '#' ) {
             if ( einamoji_nuoroda.length <= 1 ) {
                 elementu_auksciai.push(0);
@@ -83,7 +83,7 @@ function detectVisibleSection( scrollHeight ) {
 function renderCards( data ) {
     var HTML = '',
         good_ones = 0;
-    
+
     if ( !Array.isArray(data) || data.length === 0 ) {
         return HTML;
     }
@@ -137,7 +137,7 @@ function statisticsModule( data ){
  */
 function renderSkills( data ) {
     var HTML = '';
-    
+
     if ( !Array.isArray(data) || data.length === 0 ) {
         return HTML;
     }
@@ -285,19 +285,19 @@ function renderHistory( data ){
 
 /**
  * Function for date convertion from e.g. "2018-01-05" to "Jan'05"
- * @param {string} date 
+ * @param {string} date
  * @returns {string} Formated date value
  */
 function dateConverter( date ) {
     var formated = '',
         months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         values = date.split("-");
-    
+
     if ( typeof(date) !== 'string' ||
          date === '' ) {
         return formated;
     }
-    
+
     values[1] = parseInt(values[1]) - 1;
 
     formated = months[ values[1] ] + '\'' + values[2];
@@ -305,6 +305,22 @@ function dateConverter( date ) {
     return formated;
 }
 
+/* Scroll Button */
+
+$(document).ready(function() {
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.upArrow').fadeIn();
+    } else {
+      $('.upArrow').fadeOut();
+    }
+  });
+
+  $('.upArrow').click(function() {
+    $('html, body').animate({scrollTop : 0}, 600);
+  });
+});
 
 /* TESTIMONIALS */
 
